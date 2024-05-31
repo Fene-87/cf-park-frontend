@@ -243,4 +243,187 @@
 /* end of play section */
 
 /* start of features section */
+#programs-section {
+  display: flex;
+  justify-content: center;
+}
+
+.programs-section-container {
+  background-color: #fff;
+  min-height: 100vh;
+  width: 80%;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.programs-section-container>h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  /* color: #333333; */
+  color: #026467;
+}
+
+.program {
+  width: 80%;
+  display: flex;
+  margin-top: 4rem;
+  gap: 3rem;
+}
+
+.program-content {
+  padding: 10px;
+}
+
+.program-content>h4 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.program-content>p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+  line-height: 24px;
+}
+
+.program-img {
+  height: 300px;
+  width: 450px;
+}
 /* end of features section */
+
+/* start of contact section */
+#contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background-color: #F5F4F0;
+  min-height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.contact-container>h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  /* color: #333333; */
+  color: #026467;
+}
+
+.contact-options {
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.contact-person {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 0;
+}
+
+.coach-img {
+  height: 250px;
+  width: 250px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 3rem;
+  font-size: 28px;
+  color: #026467;
+  margin-top: 5px;
+}
+
+.phone-no {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+.coach-text {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.coach-content-txt {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  width: 60%;
+}
+
+.contact-form {
+  width: 50%;
+  background-color: #e5f5ea;
+  border-radius: 7px;
+  padding: 10px 20px;
+}
+
+.contact-form>h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #026467;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.contact-form>form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 1.5rem;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 10px;
+  width: 90%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-text {
+  height: 8rem;
+}
+/* end of contact section */
