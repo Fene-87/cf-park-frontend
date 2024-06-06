@@ -1,12 +1,12 @@
 import React from 'react'
+import cfLogo from '../assets/cf-logo.jpg'
 
 const Navbar = () => {
   return (
     <header id='nav-header' className='shadow-effect'>
       <div className='nav-list'>
-        {/* <img src="" alt="" /> */}
-        <div>
-            CF Logo
+        <div className='nav-logo'>
+            <img src={cfLogo} alt="Logo" className='nav-image'/>
         </div>
 
         <ul className='menu-list'>
@@ -18,10 +18,6 @@ const Navbar = () => {
             <li>Team Bookings</li>
             <li>About Us</li>
         </ul>
-
-        {/* <div>
-            <p>Book Now</p>
-        </div> */}
 
         <div>
             <p>Sign in / Sign up</p>

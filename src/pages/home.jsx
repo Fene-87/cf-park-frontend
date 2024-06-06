@@ -43,8 +43,10 @@ const Home = () => {
               <div class="bottom-right"></div>
             </div>
 
-            <div className='cf-great-wall'>
-              <h3>CF Park Great Wall</h3>
+            <div className='cf-great-wall cf-container'>
+              <h3><MdOutlineLocationOn /> <br />CF Park,<br /> Great Wall</h3>
+              <div class="bottom-left"></div>
+              <div class="bottom-right"></div>
             </div>
           </div>
         </div>
