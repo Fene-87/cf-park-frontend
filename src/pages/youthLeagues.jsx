@@ -4,10 +4,10 @@ import Footer from '../components/footer';
 import leaguesImg from '../assets/adult-leagues-3.jpg';
 import { motion as m } from 'framer-motion';
 
-const Leagues = () => {
+const YouthLeagues = () => {
   return (
     <m.div 
-      id='leagues-page'
+      id='youth-leagues-page'
       initial={{ opacity: 0.5}}
       animate={{ opacity: 1}}
       exit={{ opacity: 0.5}}
@@ -19,7 +19,7 @@ const Leagues = () => {
             <Navbar />
           </div>
           <div className='academy-content'>
-            <h2>Adult Leagues</h2>
+            <h2>Youth Leagues</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div className='banner-btn'>
               <button className='banner-btn-book'>Book Now</button>
@@ -31,11 +31,10 @@ const Leagues = () => {
 
       <section id='leagues-first'>
         <div className='academy-first-container shadow-effect'>
-          <h2>Adult Leagues</h2>
+          <h2>Youth Leagues</h2>
           <p>
-            Embrace your love for the game in our adult leagues. With a monthly fee of KES 4,000
-            and a one-time registration fee of KES 2,000 adults can enjoy regular matches, competitions,
-            and camaraderie with fellow football enthusiasts.
+            Calling all youth players. Join our vibrant youth league and showcase your talent
+            on the field. Get ready for intense matches, coaching sessions, and a chance to shine
           </p>
         </div>
       </section>
@@ -61,4 +60,4 @@ const Leagues = () => {
   )
 }
 
-export default Leagues;
+export default YouthLeagues;

@@ -584,6 +584,100 @@
   height: 350px;
   background-color: #fff;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.category-card>h4 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #026467;
+}
+
+.category-card>h5 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.category-card>p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.why-join-academy {
+  width: 80%;
+  margin-top: 4rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.why-join-academy h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #026467;
+}
+
+.why-join-left {
+  width: 30%;
+}
+
+.why-join-left>h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 25px;
+  margin-top: 20px;
+  color: #333333;
+}
+
+.why-join-left>p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 10px;
+  color: #333333;
+}
+
+.why-join-left>hr {
+  margin-top: 20px;
+  color: #026467;
+  width: 20%;
+}
+
+.why-join-right {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.detail-card {
+  height: 200px;
+  border-radius: 8px;
+  padding: 20px 10px;
+}
+
+.detail-card>h4 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.detail-card>p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 10px;
+  color: #333333;
 }
 
 #academy-second {
@@ -625,7 +719,7 @@
 /* Adult Leagues Page */
 #leagues-bg-img {
   height: 60vh;
-  background-image: url('./assets/adult-leagues-2.jpg');
+  background-image: url('./assets/adult-leagues-3.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -635,3 +729,26 @@
   justify-content: center;
 }
 /* Adult Leagues Page */
+
+/* Fitness Page */
+#fitness-bg-img {
+  height: 60vh;
+  background-image: url('./assets/women-fitness.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/* Fitness Page */
+
+/* Team Bookings Page */
+#calendar-section {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-calendar {
+  width: 80%;
+  margin: 8rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* Team Bookings Page */

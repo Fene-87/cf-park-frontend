@@ -7,10 +7,17 @@ import { FaRegMessage } from "react-icons/fa6";
 import Footer from '../components/footer';
 import cfpark from '../assets/cfpark-background.jpg';
 import coachez from '../assets/profile-placeholder.png';
+import { motion as m } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div id='home-page'>
+    <m.div 
+      id='home-page'
+      initial={{ opacity: 0.5}}
+      animate={{ opacity: 1}}
+      exit={{ opacity: 0.5}}
+      transition={{ duration: 0.75, ease: "easeInOut"}}
+    >
       <section id='home-bg-img' className='shadow-effect'>
         <div className="bg-gradient">
           <div className="banner-nav">
@@ -39,14 +46,14 @@ const Home = () => {
           <div id='location-img-section'>
             <div className='cf-kite cf-container'>
               <h3><MdOutlineLocationOn /> <br />CF Park Kitengela,<br /> Chuna Estate</h3>
-              <div class="bottom-left"></div>
-              <div class="bottom-right"></div>
+              <div className="bottom-left"></div>
+              <div className="bottom-right"></div>
             </div>
 
             <div className='cf-great-wall cf-container'>
               <h3><MdOutlineLocationOn /> <br />CF Park,<br /> Great Wall</h3>
-              <div class="bottom-left"></div>
-              <div class="bottom-right"></div>
+              <div className="bottom-left"></div>
+              <div className="bottom-right"></div>
             </div>
           </div>
         </div>
@@ -155,7 +162,7 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
+    </m.div>
   )
 }
 

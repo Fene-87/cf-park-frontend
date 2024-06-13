@@ -16,6 +16,9 @@ const Navbar = () => {
           <NavLink to='/academy' className='navlink'>
             <li>Kids Academy</li>
           </NavLink>
+          <NavLink to='/youth-leagues' className='navlink'>
+            <li>Youth Leagues</li>
+          </NavLink>
           <NavLink to='/adult-leagues' className='navlink'>
             <li>Adult Leagues</li>
           </NavLink>
@@ -25,16 +28,13 @@ const Navbar = () => {
           <NavLink to='/events' className='navlink'>
             <li>Events</li>
           </NavLink>
-          <NavLink className='navlink'>
+          <NavLink to='/team-bookings' className='navlink'>
             <li>Team Bookings</li>
-          </NavLink>
-          <NavLink to='/about' className='navlink'>
-            <li>About Us</li>
           </NavLink>
         </ul>
 
         <div>
-            <p>Sign in / Sign up</p>
+            <p>Be A Member</p>
         </div>
       </div>
     </header>
