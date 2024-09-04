@@ -123,10 +123,10 @@ const TeamBookings = () => {
             </div>
           </div>
 
-          <div>
+          <div className='pick-time'>
             <h4>Pick a time</h4>
               {date.justDate && (
-                <div>
+                <div className='times-container'>
                   {times?.map((time, i) => (
                     <div key={`time-${i}`} className='available-times'>
                       <button 
@@ -140,6 +140,12 @@ const TeamBookings = () => {
                 </div>
               )}
           </div>
+        </div>
+
+        <div>
+          <hr />
+          <h4>Or</h4>
+          <h5>Contact Us to Secure Your Booking</h5>
         </div>
       </section>
       <Footer />

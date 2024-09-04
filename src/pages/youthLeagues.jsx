@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import leaguesImg from '../assets/adult-leagues-3.jpg';
 import { motion as m } from 'framer-motion';
+import Players from '../components/players';
 
 const YouthLeagues = () => {
   return (
@@ -19,7 +20,7 @@ const YouthLeagues = () => {
             <Navbar />
           </div>
           <div className='academy-content'>
-            <h2>Youth Leagues</h2>
+            <h2>FKF League</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div className='banner-btn'>
               <button className='banner-btn-book'>Book Now</button>
@@ -31,7 +32,7 @@ const YouthLeagues = () => {
 
       <section id='leagues-first'>
         <div className='academy-first-container shadow-effect'>
-          <h2>Youth Leagues</h2>
+          <h2>FKF League</h2>
           <p>
             Calling all youth players. Join our vibrant youth league and showcase your talent
             on the field. Get ready for intense matches, coaching sessions, and a chance to shine
@@ -40,18 +41,15 @@ const YouthLeagues = () => {
       </section>
 
       <section id='academy-second'>
-        <div className='academy-second-container shadow-effect'>
-          <h2>Gallery</h2>
-          <div className='academy-gallery'>
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
-            <img src={leaguesImg} alt="academy image" />
+        <div className='fkf-second-container shadow-effect'>
+          <ul className='fkf-nav'>
+            <li>Players</li>
+            <li>League Table</li>
+            <li>Stats</li>
+          </ul>
+
+          <div className='fkf-details-container'>
+            <Players />
           </div>
         </div>
       </section>

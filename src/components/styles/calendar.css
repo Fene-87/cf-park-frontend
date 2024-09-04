@@ -176,3 +176,23 @@
   .react-calendar--selectRange .react-calendar__tile--hover {
     background-color: rgb(238 242 255);
   }
+  .times-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .pick-time {
+    width: 50%;
+  }
+  .available-times button {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #026467;
+    box-shadow: 0px 0px 20px 0px #0000001A;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .available-times button:hover {
+    background-color: rgb(238 242 255);
+  }

@@ -17,7 +17,7 @@ const Navbar = () => {
             <li>Kids Academy</li>
           </NavLink>
           <NavLink to='/youth-leagues' className='navlink'>
-            <li>Youth Leagues</li>
+            <li>FKF</li>
           </NavLink>
           <NavLink to='/adult-leagues' className='navlink'>
             <li>Adult Leagues</li>
@@ -35,6 +35,7 @@ const Navbar = () => {
 
         <div>
             <p>Be A Member</p>
+            <p><i></i></p>
         </div>
       </div>
     </header>
