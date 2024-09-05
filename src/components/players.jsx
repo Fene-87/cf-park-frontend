@@ -9,6 +9,7 @@ const Players = () => {
         <PlayerCard />
         <PlayerCard />
       </div>
+      <hr className='player-line'/>
       <h3>Defenders</h3>
       <div className='players-grid'>
         <PlayerCard />
@@ -18,11 +19,13 @@ const Players = () => {
         <PlayerCard />
         <PlayerCard />
       </div>
+      <hr className='player-line'/>
       <h3>Midfielders</h3>
       <div className='players-grid'>
         <PlayerCard />
       </div>
-      <h3>Attackers</h3>
+      <hr className='player-line'/>
+      <h3>Forwards</h3>
       <div className='players-grid'>
         <PlayerCard />
       </div>

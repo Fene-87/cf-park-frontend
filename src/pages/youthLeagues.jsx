@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import leaguesImg from '../assets/adult-leagues-3.jpg';
@@ -6,6 +6,8 @@ import { motion as m } from 'framer-motion';
 import Players from '../components/players';
 
 const YouthLeagues = () => {
+  const [active, setActive] = useState('Players');
+
   return (
     <m.div 
       id='youth-leagues-page'
@@ -43,9 +45,18 @@ const YouthLeagues = () => {
       <section id='academy-second'>
         <div className='fkf-second-container shadow-effect'>
           <ul className='fkf-nav'>
-            <li>Players</li>
-            <li>League Table</li>
-            <li>Stats</li>
+            <li
+              className={active === 'Players' ? 'active' : ''}
+              onClick={() => setActive('Players')}
+            >Players</li>
+            <li
+              className={active === 'League Table' ? 'active' : ''}
+              onClick={() => setActive('League Table')}
+            >League Table</li>
+            <li
+              className={active === 'Stats' ? 'active' : ''}
+              onClick={() => setActive('Stats')}
+            >Stats</li>
           </ul>
 
           <div className='fkf-details-container'>
