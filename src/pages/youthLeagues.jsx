@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import leaguesImg from '../assets/adult-leagues-3.jpg';
-import { motion as m } from 'framer-motion';
+import { AnimatePresence, motion as m } from 'framer-motion';
 import Players from '../components/players';
+import LeagueTable from '../components/leaguetable';
 
 const YouthLeagues = () => {
   const [active, setActive] = useState('Players');
@@ -54,13 +55,47 @@ const YouthLeagues = () => {
               onClick={() => setActive('League Table')}
             >League Table</li>
             <li
-              className={active === 'Stats' ? 'active' : ''}
-              onClick={() => setActive('Stats')}
-            >Stats</li>
+              className={active === 'Fixtures/Results' ? 'active' : ''}
+              onClick={() => setActive('Fixtures/Results')}
+            >Fixtures/Results</li>
           </ul>
 
-          <div className='fkf-details-container'>
-            <Players />
+          <div className="fkf-details-container">
+            <AnimatePresence mode='wait'>
+              {active === "Players" && (
+                <m.div
+                  key="Players"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <Players />
+                </m.div>
+              )}
+
+              {active === "League Table" && (
+                <m.div
+                  key="LeagueTable"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <LeagueTable />
+                </m.div>
+              )}
+
+              {active === "Fixtures/Results" && (
+                <m.div
+                  key="Fixtures/Results"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                ></m.div>
+              )}
+            </AnimatePresence>   
           </div>
         </div>
       </section>
