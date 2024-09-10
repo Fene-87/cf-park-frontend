@@ -985,6 +985,94 @@
   align-items: center;
   justify-content: center;
 }
+
+.result-card {
+  background-color: #fff;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.result-date {
+  background-color: #F5F4F0;
+  height: 100%;
+  width: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result-date-txt>p {
+  line-height: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  margin-left: 1rem;
+  font-size: 14px;
+}
+
+.home-away {
+  background-color: #026467;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.result-detail {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  gap: 10px;
+}
+
+.result-detail > p {
+  color: #333333;
+  font-weight: 500;
+}
+
+.result-detail-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.result-detail-div > p {
+  font-size: 12px;
+}
+
+.score-display {
+  background-color: #026467;
+  padding: 10px;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.score-divider {
+  color: #808080;
+}
+
+.result-location {
+  width: 16%;
+} 
+
+.result-location > p {
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+}
 /* fkf league */
 
 /* Adult Leagues Page */

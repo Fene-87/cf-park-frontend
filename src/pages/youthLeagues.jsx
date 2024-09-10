@@ -5,6 +5,7 @@ import leaguesImg from '../assets/adult-leagues-3.jpg';
 import { AnimatePresence, motion as m } from 'framer-motion';
 import Players from '../components/players';
 import LeagueTable from '../components/leaguetable';
+import Results from '../components/results';
 
 const YouthLeagues = () => {
   const [active, setActive] = useState('Players');
@@ -93,7 +94,9 @@ const YouthLeagues = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
-                ></m.div>
+                >
+                  <Results />
+                </m.div>
               )}
             </AnimatePresence>   
           </div>
