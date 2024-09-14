@@ -10,9 +10,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .shadow-effect {
   border: none;
   box-shadow: 0 0 33px -10px rgba(71, 114, 254, 0.3);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* navbar section */
@@ -32,6 +47,16 @@
   color: #f9f9f9;
   font-size: 18px;
   font-weight: 500;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-logo {
@@ -46,6 +71,11 @@
   width: 100%;
   object-fit: cover;
   border-radius: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-image:hover {
+  transform: scale(1.1);
 }
 
 .menu-list {
@@ -55,8 +85,59 @@
 }
 
 .navlink {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navlink:hover {
+  color: #f0a500;
+  transform: scale(1.1);
+}
+
+.navlink:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.navlink:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.navlink:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.navlink:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.navlink:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.navlink:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.cta-button {
+  background-color: #f0a500;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #f0a500;
+  transform: scale(1.05); /* Slight zoom effect */
 }
 /* end of navbar section */
 
@@ -66,7 +147,20 @@
   background-image: url('./assets/CF-BG4.jpg');
   background-position: center;
   background-size: cover;
+  /* animation: zoomIn 10s infinite; */
 }
+
+/* @keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
 
 .bg-gradient {
   height: 100%;
@@ -81,19 +175,61 @@
 }
 
 .banner-nav {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  /* background: linear-gradient(90deg, #333, #444); */
 }
 
 .banner-content {
+  position: relative;
   height: 91vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 15%;
   color: #fff;
-  /* border: 1px solid black; */
   gap: 0.5rem;
   background-color: rgb(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 200%;
+  height: 100%;
+  background-color: #026467;
+  transform: skewX(-30deg);
+  z-index: 1;
+  opacity: 0;
+  animation: slideAndFadeIn 2s ease forwards;
+}
+
+@keyframes slideAndFadeIn {
+  0% {
+      left: -150%;
+      opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+      left: 120%;
+      opacity: 1;
+  }
+}
+
+.banner-content h2,
+.banner-content h3,
+.banner-btn {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 .banner-content>h2 {
@@ -133,6 +269,15 @@
   border-radius: 7px;
   font-family: 'Bellefair', sans-serif;
   font-size: 18px;
+}
+
+.home-btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
 }
 /* end of banner section */
 
@@ -478,6 +623,11 @@
 .form-text {
   height: 8rem;
 }
+
+.contact-btn {
+  width: 50%;
+  align-self: center;
+}
 /* end of contact section */
 
 /* start of footer section */
@@ -542,6 +692,7 @@
 }
 
 .academy-content {
+  position: relative;
   background-color: rgb(0, 0, 0, 0.2);
   height: 51vh;
   display: flex;
@@ -550,6 +701,7 @@
   color: #fff;
   padding-top: 6%;
   gap: 0.5rem;
+  overflow: hidden;
 }
 
 .academy-content>h2 {
@@ -1072,6 +1224,43 @@
 .result-location > p {
   font-family: "Montserrat", sans-serif;
   color: #333333;
+}
+
+.fix-res-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+  padding: 10px 6rem;
+  margin-top: 5rem;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  font-size: 20px;
+}
+
+.fix-res-nav li {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.fix-res-nav li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #026467;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.fix-res-nav li.active::after {
+  width: 100%;
+  opacity: 1;
 }
 /* fkf league */
 

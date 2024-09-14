@@ -19,6 +19,7 @@ const Leagues = () => {
             <Navbar />
           </div>
           <div className='academy-content'>
+            <div className="content-overlay"></div>
             <h2>Adult Leagues</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div className='banner-btn'>

@@ -27,11 +27,12 @@ const Home = () => {
             <Navbar />
           </div>
           <div className='banner-content'>
-            <h2>Welcome to CF Park</h2>
-            <h3>Your ultimate destination for football enthusiasts of all ages</h3>
+            <div className="content-overlay"></div> 
+            <h2 className='fade-in'>Welcome to CF Park</h2>
+            <h3 className='fade-in'>Your ultimate destination for football enthusiasts of all ages</h3>
             <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
+              <button className='banner-btn-book home-btn fade-in'>Book Now</button>
+              <button className='banner-btn-contact home-btn fade-in'>Contact Us</button>
             </div>
           </div>
         </div>
@@ -158,6 +159,8 @@ const Home = () => {
 
                 <label htmlFor="message" className='hidden'>Get in touch</label>
                 <textarea name="message" id="message" className='form-input form-text' placeholder='Get in touch...'></textarea>
+
+                <button className='banner-btn-book home-btn fade-in contact-btn'>Submit</button>
               </form>
             </div>
           </div>

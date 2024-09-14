@@ -33,7 +33,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
 
-        <div>
+        <div className='cta-button'>
             <p>Be A Member</p>
             <p><i></i></p>
         </div>

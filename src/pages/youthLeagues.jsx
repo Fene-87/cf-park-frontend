@@ -6,9 +6,11 @@ import { AnimatePresence, motion as m } from 'framer-motion';
 import Players from '../components/players';
 import LeagueTable from '../components/leaguetable';
 import Results from '../components/results';
+import Fixtures from '../components/fixtures';
 
 const YouthLeagues = () => {
   const [active, setActive] = useState('Players');
+  const [fixturesResults, setFixturesResults] = useState('Fixtures');
 
   return (
     <m.div 
@@ -23,12 +25,13 @@ const YouthLeagues = () => {
           <div className="banner-nav">
             <Navbar />
           </div>
-          <div className='academy-content'>
+          <div className='academy-content fade-in'>
+            <div className="content-overlay"></div>
             <h2>FKF League</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
+              <button className='banner-btn-book home-btn'>Book Now</button>
+              <button className='banner-btn-contact home-btn'>Contact Us</button>
             </div>
           </div>
         </div>
@@ -95,7 +98,47 @@ const YouthLeagues = () => {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                  <Results />
+                  <div>
+                    <ul className='fix-res-nav'>
+                      <li
+                        className={fixturesResults === 'Results' ? 'active' : ''}
+                        onClick={() => setFixturesResults("Results")}
+                      >
+                        Results
+                      </li>
+                      <li
+                        className={fixturesResults === 'Fixtures' ? 'active' : ''}
+                        onClick={() => setFixturesResults("Fixtures")}
+                      >
+                        Fixtures
+                      </li>
+                    </ul>
+                    <AnimatePresence mode='wait'>
+                      {fixturesResults === "Fixtures" && (
+                        <m.div
+                        key="Fixtures"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                      >
+                        <Fixtures />
+                      </m.div>
+                      )}
+
+                      {fixturesResults === "Results" && (
+                        <m.div
+                        key="Results"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                      >
+                        <Results />
+                      </m.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </m.div>
               )}
             </AnimatePresence>   

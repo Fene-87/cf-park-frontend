@@ -18,12 +18,13 @@ const Academy = () => {
           <div className="banner-nav">
             <Navbar />
           </div>
-          <div className='academy-content'>
+          <div className='academy-content fade-in'>
+            <div className="content-overlay"></div>
             <h2>Kid's Academy</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
+              <button className='banner-btn-book home-btn'>Book Now</button>
+              <button className='banner-btn-contact home-btn'>Contact Us</button>
             </div>
           </div>
         </div>

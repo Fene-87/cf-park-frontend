@@ -1,9 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { MdOutlineLocationOn } from "react-icons/md";
 
 const FixtureCard = () => {
   return (
-    <div>
-      
+    <div className='result-card shadow-effect'>
+      <div className='result-date'>
+        <div className='result-date-txt'>
+          <p>Sun 8 Sep</p> <br />
+          <p>9:00 AM</p>
+        </div>
+        <div className='home-away'>
+          <p>H</p>
+        </div>
+      </div>
+
+      <div className='result-detail'>
+        <p>C.F. Park FC</p>
+        <div className='result-detail-div'>
+          <div className='score-display'>
+            <p>VS</p>
+          </div>
+        </div>
+        <p>Hope Stars FC</p>
+      </div>
+
+      <div className='result-location'>
+        <p><MdOutlineLocationOn /> Arena Park</p>
+      </div>
     </div>
   )
 }
