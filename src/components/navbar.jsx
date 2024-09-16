@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cfLogo from '../assets/cf-logo.jpg'
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header id='nav-header' className='shadow-effect'>
       <div className='nav-list'>
@@ -12,7 +20,7 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <ul className='menu-list'>
+        <ul className={`menu-list ${menuOpen ? 'active' : ''}`}>
           <NavLink to='/academy' className='navlink'>
             <li>Kids Academy</li>
           </NavLink>
@@ -35,7 +43,10 @@ const Navbar = () => {
 
         <div className='cta-button'>
             <p>Be A Member</p>
-            <p><i></i></p>
+        </div>
+
+        <div className='menu'>
+          <p className='menu-icon' onClick={toggleMenu}><FaBars /></p>
         </div>
       </div>
     </header>
