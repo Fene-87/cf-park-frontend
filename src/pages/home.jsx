@@ -80,7 +80,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='program shadow-effect'>
+          <div className='program shadow-effect program-reverse'>
             <div className='program-content'>
               <h4>YOUTH LEAGUE</h4>
               <p>
@@ -109,7 +109,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='program shadow-effect'>
+          <div className='program shadow-effect program-reverse'>
             <div className='program-content'>
               <h4>TEAM BOOKINGS</h4>
               <p>
