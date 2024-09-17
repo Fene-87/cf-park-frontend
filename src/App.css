@@ -672,6 +672,13 @@ html {
   gap: 3rem;
   font-size: 22px;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.footer-social-icons span:hover {
+  color: #f0a500;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .footer-container>hr {
@@ -1359,7 +1366,15 @@ html {
   }
 
   .cta-button {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+  }
+
+  .cta-button.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 1s;
   }
 
   .menu {
@@ -1399,6 +1414,25 @@ html {
   .banner-btn-contact {
     font-size: 22px;
   }
+
+  .content-overlay {
+    left: -200%;
+    width: 300%;
+  }
+
+  @keyframes slideAndFadeIn {
+  0% {
+      left: -200%;
+      opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+      left: 200%;
+      opacity: 1;
+  }
+}
 
   #play-section {
     height: 150vh;
@@ -1539,4 +1573,31 @@ html {
     text-align: center;
     z-index: 1;
   }
+
+  #footer {
+    height: fit-content;
+  }
+
+.footer-container {
+  padding: 5rem 0;
+}
+
+.footer-txt {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer-social-icons {
+  margin-top: 40px;
+}
+
+.footer-container>hr {
+  width: 90%;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
 }

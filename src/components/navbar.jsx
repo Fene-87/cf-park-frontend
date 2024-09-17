@@ -6,9 +6,19 @@ import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ctaVisible, setCtaVisible] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    if(!menuOpen) {
+      setMenuOpen(true);
+
+      setTimeout(() => {
+        setCtaVisible(true);
+      }, 500);
+    } else {
+      setCtaVisible(false);
+      setMenuOpen(false)
+    }
   };
 
   return (
@@ -41,7 +51,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
 
-        <div className='cta-button'>
+        <div className={`cta-button ${ctaVisible ? 'active' : ''}`}>
             <p>Be A Member</p>
         </div>
 
