@@ -3,7 +3,7 @@ import ResultCard from './resultcard'
 
 const Results = () => {
   return (
-    <div>
+    <div className='results-section'>
       <ResultCard />
       <ResultCard />
       <ResultCard />

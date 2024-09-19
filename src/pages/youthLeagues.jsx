@@ -58,13 +58,13 @@ const YouthLeagues = () => {
               onClick={() => setActive('Players')}
             >Players</li>
             <li
-              className={active === 'League Table' ? 'active' : ''}
-              onClick={() => setActive('League Table')}
-            >League Table</li>
-            <li
               className={active === 'Fixtures/Results' ? 'active' : ''}
               onClick={() => setActive('Fixtures/Results')}
             >Fixtures/Results</li>
+            <li
+              className={active === 'League Table' ? 'active' : ''}
+              onClick={() => setActive('League Table')}
+            >Table</li>
           </ul>
 
           <div className="fkf-details-container">

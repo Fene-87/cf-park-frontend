@@ -27,7 +27,7 @@ const LeagueTable = () => {
         <tbody>
     <tr>
       <td>1</td>
-      <td>Ereteti FC</td>
+      <td>ERETETI FC</td>
       <td>3</td>
       <td>3</td>
       <td>0</td>
