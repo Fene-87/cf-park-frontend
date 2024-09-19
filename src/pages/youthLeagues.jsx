@@ -7,8 +7,11 @@ import Players from '../components/players';
 import LeagueTable from '../components/leaguetable';
 import Results from '../components/results';
 import Fixtures from '../components/fixtures';
+import Swiper from 'swiper';
+import 'swiper/css';
 
 const YouthLeagues = () => {
+  
   const [active, setActive] = useState('Players');
   const [fixturesResults, setFixturesResults] = useState('Fixtures');
 
