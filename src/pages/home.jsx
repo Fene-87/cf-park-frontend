@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
@@ -11,8 +12,36 @@ import adultImg from '../assets/adult-leagues-3.jpg';
 import youthImg from '../assets/academy.jpg';
 import coachez from '../assets/profile-placeholder.png';
 import { motion as m } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const serviceID = import.meta.env.VITE_YOUR_SERVICE_ID;
+    const templateID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_YOUR_PUBLIC_KEY;
+
+    emailjs
+      .sendForm(serviceID, templateID, form.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const goToBookings = () => {
+    navigate("/team-bookings");
+  }
   return (
     <m.div 
       id='home-page'
@@ -31,7 +60,7 @@ const Home = () => {
             <h2 className='fade-in'>Welcome to CF Park</h2>
             <h3 className='fade-in'>Your ultimate destination for football enthusiasts of all ages</h3>
             <div className='banner-btn'>
-              <button className='banner-btn-book home-btn fade-in'>Book Now</button>
+              <button onClick={goToBookings} className='banner-btn-book home-btn fade-in'>Book Now</button>
               <button className='banner-btn-contact home-btn fade-in'>Contact Us</button>
             </div>
           </div>
@@ -147,20 +176,20 @@ const Home = () => {
 
             <div className='contact-form'>
               <h3>Get In Touch</h3>
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <label htmlFor="name" className='hidden'>Full Name</label>
-                <input type="text" id='name' className='form-input' placeholder='Full name'/>
+                <input type="text" id='name' name='from_name' className='form-input' placeholder='Full name'/>
 
                 <label htmlFor="email" className='hidden'>Email Address</label>
-                <input type="email" id='email' className='form-input' placeholder='Email address' />
+                <input type="email" id='email' name='from_email' className='form-input' placeholder='Email address' />
 
                 <label htmlFor="phone" className='hidden'>Phone Number</label>
-                <input type="text" id='phone' className='form-input' placeholder='Phone number' />
+                <input type="text" id='phone' name='from_phone' className='form-input' placeholder='Phone number' />
 
                 <label htmlFor="message" className='hidden'>Get in touch</label>
                 <textarea name="message" id="message" className='form-input form-text' placeholder='Get in touch...'></textarea>
 
-                <button className='banner-btn-book home-btn fade-in contact-btn'>Submit</button>
+                <button type='submit' className='banner-btn-book home-btn fade-in contact-btn'>Submit</button>
               </form>
             </div>
           </div>

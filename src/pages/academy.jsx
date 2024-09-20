@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import academyImg from '../assets/academy.jpg';
 import { motion as m } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { GrFormPreviousLink } from "react-icons/gr";
+import { GrFormNextLink } from "react-icons/gr";
 
 const Academy = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <m.div 
       id='academy-page'
@@ -95,50 +115,151 @@ const Academy = () => {
               <hr />
             </div>
 
-            <div className='why-join-right'>
-              <div className='detail-card shadow-effect'>
-                <h4>Professional Coach</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
+            <div className='why-join-right-container'>
+            {isMobile ? (
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={false}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={{el:'.swiper-pagination', clickable:true}}
+                navigation={{
+                  nextEl:'.swiper-button-next',
+                  prevEl:'.swiper-button-prev',
+                  clickable:true
+                }}
+                modules={[EffectCoverflow, Pagination, Navigation]}
+                className='swiper-container-academy'
+              >    
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>Professional Coach</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>Private Coaching</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>Tactical Mastery</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>Skills Training</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>State of the art facilities</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className='detail-card shadow-effect'>
+                      <h4>School Holiday Program</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                        distinctio animi at tempore illum totam aliquam?
+                      </p>
+                    </div>
+                  </SwiperSlide>
+
+                <div className="slider-controler .slider-controller-academy">
+                  <div className="swiper-button-prev slider-arrow">
+                    <GrFormPreviousLink />
+                  </div>
+                
+                  <div className="swiper-button-next slider-arrow">
+                    <GrFormNextLink />
+                  </div>
+
+                  <div className="swiper-pagination"></div>
+                  
+                </div>
+              </Swiper>
+              ) : (
+                <div className='why-join-right'>
+                <div className='detail-card shadow-effect'>
+                  <h4>Professional Coach</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
+                <div className='detail-card shadow-effect'>
+                  <h4>Private Coaching</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
+                <div className='detail-card shadow-effect'>
+                  <h4>Tactical Mastery</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
+                <div className='detail-card shadow-effect'>
+                  <h4>Skills Training</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
+                <div className='detail-card shadow-effect'>
+                  <h4>State of the art facilities</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
+                <div className='detail-card shadow-effect'>
+                  <h4>School Holiday Program</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
+                    distinctio animi at tempore illum totam aliquam?
+                  </p>
+                </div>
               </div>
-              <div className='detail-card shadow-effect'>
-                <h4>Private Coaching</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
-              </div>
-              <div className='detail-card shadow-effect'>
-                <h4>Tactical Mastery</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
-              </div>
-              <div className='detail-card shadow-effect'>
-                <h4>Skills Training</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
-              </div>
-              <div className='detail-card shadow-effect'>
-                <h4>State of the art facilities</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
-              </div>
-              <div className='detail-card shadow-effect'>
-                <h4>School Holiday Program</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad dolore et ab 
-                  distinctio animi at tempore illum totam aliquam?
-                </p>
-              </div>
+            )}
             </div>
+            
           </div>
         </div>
       </section>

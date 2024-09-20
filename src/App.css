@@ -851,8 +851,12 @@ html {
   width: 20%;
 }
 
-.why-join-right {
+.why-join-right-container {
   width: 70%;
+}
+
+.why-join-right {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
@@ -1673,60 +1677,38 @@ html {
 
   .why-join-left>hr {
     width: 25%;
-    height: 4px;
+    height: 3px;
     background-color: #026467;
   }
 
+  .why-join-right-container {
+    width: 100%;
+  }
+
   .why-join-right {
-    width: 90%;
+    width: 100%;
     display: flex;
   }
 
   .detail-card {
-    height: 200px;
-    border-radius: 8px;
-    padding: 20px 10px;
-  }
-
-  .detail-card>h4 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #333333;
-  }
-
-  .detail-card>p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    line-height: 25px;
-    margin-top: 10px;
-    color: #333333;
-  }
-
-  #academy-second {
-    display: flex;
-    justify-content: center;
+    height: 300px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
   }
 
   .academy-second-container {
-    height: 100%;
-    width: 80%; 
-    padding: 8rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 85%; 
+    padding: 6rem 0;
   }
 
   .academy-second-container>h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 42px;
-    font-weight: 600;
-    color: #026467;
+    font-size: 33px;
   }
 
   .academy-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 3rem;
     column-gap: 3rem;
     margin-top: 4rem;
@@ -1770,11 +1752,19 @@ html {
     position: relative;
   }
 
-  .swiper-slide {
+  .swiper-container-academy {
+    height: 100%;
+    width: 100% !important;
+  }
+
+  .swiper-container .swiper-slide {
     width: 280px !important;
     height: 480px !important;
     position: relative;
-    /* border: 1px solid black; */
+  }
+
+  .swiper-container-academy .swiper-slide {
+    height: 340px;
   }
 
   .swiper-slide-shadow-left,
