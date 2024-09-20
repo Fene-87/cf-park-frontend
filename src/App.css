@@ -355,7 +355,7 @@ html {
 }
 
 .cf-great-wall::before {
-  background-image: url('./assets/cfgreatwall2.jpg');
+  background-image: url('./assets/cfgreatwall3.jpg');
   top: 0;
   left: 0;
 }
@@ -373,7 +373,7 @@ html {
   height: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url('./assets/cfgreatwall1.jpg');
+  background-image: url('./assets/cfgreatwall3.jpg');
   bottom: 0;
   left: 0;
 }
@@ -385,7 +385,7 @@ html {
   height: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url('./assets/cfgreatwall4.jpg');
+  background-image: url('./assets/cfgreatwall3.jpg');
   bottom: 0;
   left: 50%;
 }
@@ -1148,6 +1148,7 @@ html {
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
+  box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
 }
 
 .result-date {
@@ -1159,12 +1160,23 @@ html {
   justify-content: space-between;
 }
 
-.result-date-txt>p {
+.result-date-txt {
+  display: flex;
+  align-items: center;
+}
+
+.result-date-txt p {
   line-height: 5px;
   font-family: "Montserrat", sans-serif;
   color: #333333;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   font-size: 14px;
+}
+
+.fkf-logo {
+  height: 40px;
+  width: 45px;
+  margin-left: 0.5rem;
 }
 
 .home-away {
@@ -1886,6 +1898,7 @@ html {
     flex-direction: column;
     margin-top: 4rem;
     padding-bottom: 1rem;
+    box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
   }
   
   .result-date {

@@ -3,7 +3,7 @@ import FixtureCard from './fixturecard'
 
 const Fixtures = () => {
   return (
-    <div>
+    <div className='results-section'>
       <FixtureCard />
       <FixtureCard />
       <FixtureCard />
