@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import academyImg from '../assets/academy.jpg';
+
 import { motion as m } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -12,6 +14,18 @@ import 'swiper/css/navigation';
 
 import { GrFormPreviousLink } from "react-icons/gr";
 import { GrFormNextLink } from "react-icons/gr";
+
+import academyImg from '../assets/academy.jpg';
+import academyImg1 from '../assets/academy1.jpg';
+import academyImg2 from '../assets/academy2.jpg';
+import academyImg3 from '../assets/academy3.jpg';
+import academyImg4 from '../assets/academy4.jpg';
+import academyImg5 from '../assets/academy5.jpg';
+import academyImg6 from '../assets/academy6.jpg';
+import academyImg7 from '../assets/academy7.jpg';
+import academyImg8 from '../assets/academy8.jpg';
+import academyImg9 from '../assets/academy9.jpg';
+import academyImg10 from '../assets/academy10.jpg';
 
 const Academy = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
@@ -269,14 +283,16 @@ const Academy = () => {
           <h2>Gallery</h2>
           <div className='academy-gallery'>
             <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
-            <img src={academyImg} alt="academy image" />
+            <img src={academyImg1} alt="academy image" />
+            <img src={academyImg2} alt="academy image" />
+            <img src={academyImg3} alt="academy image" />
+            {/* <img src={academyImg4} alt="academy image" /> */}
+            <img src={academyImg5} alt="academy image" />
+            <img src={academyImg6} alt="academy image" />
+            <img src={academyImg7} alt="academy image" />
+            {/* <img src={academyImg8} alt="academy image" /> */}
+            <img src={academyImg9} alt="academy image" />
+            <img src={academyImg10} alt="academy image" />
           </div>
         </div>
       </section>

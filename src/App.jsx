@@ -7,6 +7,8 @@ import Fitness from './pages/fitness'
 import Events from './pages/events'
 import YouthLeagues from './pages/youthLeagues'
 import TeamBookings from './pages/teamBookings'
+import Chuna from './pages/chuna'
+import GreatWall from './pages/greatwall'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path='/fitness' element={<Fitness />} />
         <Route path='/events' element={<Events />} />
         <Route path='/team-bookings' element={<TeamBookings />} />
+        <Route path='/cfpark-chuna' element={<Chuna />} />
+        <Route path='/cfpark-greatwall' element={<GreatWall />} />
       </Routes>
     </BrowserRouter>
   )

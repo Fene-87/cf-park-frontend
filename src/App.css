@@ -341,7 +341,8 @@ html {
 
 .cf-container {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  /* overflow: hidden; */
 }
 
 .cf-container::before,
@@ -440,6 +441,58 @@ html {
   font-size: 2em;
   text-align: center;
   z-index: 1;
+}
+
+.cf-container p {
+  position: absolute;
+  color: #026467;
+  z-index: 10;
+  bottom: -2rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.turf-location {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #89b2ac, #a1d1c9);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.turf-location:hover {
+  background: linear-gradient(135deg, #a1d1c9, #89b2ac);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.turf-location svg {
+  color: #333333;
+  text-decoration: none;
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.turf-location:hover svg {
+  animation: arrowBounce 0.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
 }
 /* end of play section */
 
@@ -541,6 +594,7 @@ html {
   align-items: center;
   background-color: #fff;
   padding: 1rem 0;
+  box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
 }
 
 .coach-img {
@@ -590,6 +644,7 @@ html {
   background-color: #e5f5ea;
   border-radius: 7px;
   padding: 10px 20px;
+  box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
 }
 
 .contact-form>h3 {
@@ -916,6 +971,7 @@ html {
 .academy-gallery>img {
   width: 300px;
   height: 300px;
+  object-fit: cover;
 }
 
 /* Academy Page */
@@ -1307,6 +1363,13 @@ html {
 /* Fitness Page */
 
 /* Team Bookings Page */
+#booking-bg-img {
+  height: 60vh;
+  background-image: url('./assets/cfgreatwall2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 #calendar-section {
   display: flex;
   flex-direction: column;
@@ -1325,6 +1388,15 @@ html {
   font-size: 30px;
   font-weight: 400;
   color: #026467;
+}
+
+.date-picker {
+  width: 500px;
+  border: 1px solid red;
+}
+
+.date-picker input {
+  width: 50px !important;
 }
 /* Team Bookings Page */
 

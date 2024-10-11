@@ -9,8 +9,37 @@ import coachez from '../assets/profile-placeholder.png';
 import ReactCaledar from 'react-calendar';
 import '../components/styles/calendar.css';
 import { add, format } from 'date-fns';
+import DateTimePicker from 'react-datetime-picker';
+import { useSession, useSupabaseClient, useSessionContext } from '@supabase/auth-helpers-react';
 
 const TeamBookings = () => {
+  const [startTime, setStartTime] = useState(new Date());
+  const [endTime, setEndTime] = useState(new Date());
+  const [eventName, setEventName] = useState("");
+  const [eventDescription, setEventDescription] = useState("");
+
+  const session = useSession();
+  const supabase = useSupabaseClient();
+  const { isLoading } = useSessionContext();
+
+  const googleSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options:{
+        scopes: 'https://www.googleapis.com/auth/calendar'
+      }
+    })
+
+    if(error) {
+      alert("Error logging in to google provider with Supabase")
+      console.log(error);
+    }
+  }
+
+  const signOut = async () => {
+    await supabase.auth.signOut();
+  }
+
   const [date, setDate] = useState({
     justDate: '',
     dateTime: '',
@@ -33,7 +62,41 @@ const TeamBookings = () => {
     return times;
   }
 
+  const bookNow = async () => {
+    console.log("Booking your slot")
+
+    const event = {
+      // "summary": eventName,
+      // "description": eventDescription,
+      "start": {
+        "dateTime": startTime.toISOString(),
+        "timeZone": Intl.DateTimeFormat().resolvedOptions().timeZone
+      },
+      "end": {
+        "dateTime": endTime.toISOString(),
+        "timeZone": Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
+    }
+
+    await fetch("https://www.googleapis.com/calendar/v3/calendars/primary/events", {
+      method: "POST",
+      headers: {
+        'Authorization': 'Bearer ' + session.provider_token
+      },
+      body: JSON.stringify(event)
+    }).then((data) => {
+      return data.json();
+    }).then((data) => {
+      console.log(data);
+      alert("Spot booked, check your google calendar")
+    })
+  }
+
   const times = getTimes();
+
+  if(isLoading) {
+    return <></>
+  }
   
   return (
     <m.div 
@@ -43,7 +106,7 @@ const TeamBookings = () => {
       exit={{ opacity: 0.5}}
       transition={{ duration: 0.75, ease: "easeInOut"}}
     >
-      <section id='fitness-bg-img' className='shadow-effect'>
+      <section id='booking-bg-img' className='shadow-effect'>
         <div className="bg-gradient">
           <div className="banner-nav">
             <Navbar />
@@ -146,6 +209,37 @@ const TeamBookings = () => {
           <hr />
           <h4>Or</h4>
           <h5>Contact Us to Secure Your Booking</h5>
+        </div>
+
+        <div>
+          {session ? (
+            <div>
+              <div>
+                <h3>Book a slot</h3>
+                <p>Start of your session</p>
+                <DateTimePicker 
+                  onChange={setStartTime} 
+                  value={startTime} 
+                  className='date-picker' 
+                />
+                <p>End of your session</p>
+                <DateTimePicker 
+                  onChange={setEndTime} 
+                  value={endTime} 
+                  className='date-picker' 
+                />
+                <button onClick={bookNow}>Book Now</button>
+                <br />
+                <button onClick={signOut}>Sign out</button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div>
+                <button onClick={googleSignIn}>Sign in with google</button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
       <Footer />

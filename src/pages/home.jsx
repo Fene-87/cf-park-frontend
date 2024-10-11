@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
@@ -13,10 +13,13 @@ import youthImg from '../assets/academy.jpg';
 import coachez from '../assets/profile-placeholder.png';
 import { motion as m } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Home = () => {
   const navigate = useNavigate();
   const form = useRef();
+  const captchaSiteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -42,6 +45,11 @@ const Home = () => {
   const goToBookings = () => {
     navigate("/team-bookings");
   }
+
+  const onChange = (value) => {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <m.div 
       id='home-page'
@@ -81,12 +89,18 @@ const Home = () => {
               <h3><MdOutlineLocationOn /> <br />CF Park Kitengela,<br /> Chuna Estate</h3>
               <div className="bottom-left"></div>
               <div className="bottom-right"></div>
+              <p className='home-see-more'>
+                <NavLink to='/cfpark-chuna' className="turf-location">See More <FaArrowRightLong /></NavLink>
+              </p>
             </div>
 
             <div className='cf-great-wall cf-container'>
               <h3><MdOutlineLocationOn /> <br />CF Park,<br /> Great Wall</h3>
               <div className="bottom-left"></div>
               <div className="bottom-right"></div>
+              <p className='home-see-more'>
+                <NavLink to='/cfpark-greatwall' className="turf-location">See More <FaArrowRightLong /></NavLink>
+              </p>
             </div>
           </div>
         </div>
@@ -188,6 +202,12 @@ const Home = () => {
 
                 <label htmlFor="message" className='hidden'>Get in touch</label>
                 <textarea name="message" id="message" className='form-input form-text' placeholder='Get in touch...'></textarea>
+
+                <ReCAPTCHA
+                  // sitekey={captchaSiteKey}
+                  sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+                  onChange={onChange}
+                />
 
                 <button type='submit' className='banner-btn-book home-btn fade-in contact-btn'>Submit</button>
               </form>
