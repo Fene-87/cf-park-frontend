@@ -9,6 +9,7 @@ import Results from '../components/results';
 import Fixtures from '../components/fixtures';
 import Swiper from 'swiper';
 import 'swiper/css';
+import BannerButtons from '../components/bannerbuttons';
 
 const YouthLeagues = () => {
   
@@ -32,10 +33,7 @@ const YouthLeagues = () => {
             <div className="content-overlay"></div>
             <h2>FKF League</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className='banner-btn'>
-              <button className='banner-btn-book home-btn'>Book Now</button>
-              <button className='banner-btn-contact home-btn'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>

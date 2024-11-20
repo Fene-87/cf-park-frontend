@@ -11,6 +11,8 @@ import '../components/styles/calendar.css';
 import { add, format } from 'date-fns';
 import DateTimePicker from 'react-datetime-picker';
 import { useSession, useSupabaseClient, useSessionContext } from '@supabase/auth-helpers-react';
+import Booking from '../components/booking';
+import BannerButtons from '../components/bannerbuttons';
 
 const TeamBookings = () => {
   const [startTime, setStartTime] = useState(new Date());
@@ -114,10 +116,7 @@ const TeamBookings = () => {
           <div className='academy-content'>
             <h2>Team Bookings</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>
@@ -174,7 +173,7 @@ const TeamBookings = () => {
         </div>
       </section> */}
       <section id='calendar-section'>
-        <div className='booking-calendar'>
+        {/* <div className='booking-calendar'>
           <div>
             <div>
               <ReactCaledar 
@@ -203,15 +202,15 @@ const TeamBookings = () => {
                 </div>
               )}
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <hr />
           <h4>Or</h4>
           <h5>Contact Us to Secure Your Booking</h5>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           {session ? (
             <div>
               <div>
@@ -240,6 +239,9 @@ const TeamBookings = () => {
               </div>
             </div>
           )}
+        </div> */}
+        <div className='calendly-booking shadow-effect'>
+          <Booking />
         </div>
       </section>
       <Footer />

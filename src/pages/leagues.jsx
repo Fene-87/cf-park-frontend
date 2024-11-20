@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import leaguesImg from '../assets/adult-leagues-3.jpg';
 import { motion as m } from 'framer-motion';
+import BannerButtons from '../components/bannerbuttons';
 
 const Leagues = () => {
   return (
@@ -22,10 +23,7 @@ const Leagues = () => {
             <div className="content-overlay"></div>
             <h2>Adult Leagues</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>

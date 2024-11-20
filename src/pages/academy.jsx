@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -26,6 +27,7 @@ import academyImg7 from '../assets/academy7.jpg';
 import academyImg8 from '../assets/academy8.jpg';
 import academyImg9 from '../assets/academy9.jpg';
 import academyImg10 from '../assets/academy10.jpg';
+import BannerButtons from '../components/bannerbuttons';
 
 const Academy = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
@@ -56,10 +58,7 @@ const Academy = () => {
             <div className="content-overlay"></div>
             <h2>Kid's Academy</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className='banner-btn'>
-              <button className='banner-btn-book home-btn'>Book Now</button>
-              <button className='banner-btn-contact home-btn'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>

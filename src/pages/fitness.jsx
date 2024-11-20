@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { motion as m } from 'framer-motion';
+import BannerButtons from '../components/bannerbuttons';
 
 const Fitness = () => {
   return (
@@ -20,10 +21,7 @@ const Fitness = () => {
           <div className='academy-content'>
             <h2>Fitness</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className='banner-btn'>
-              <button className='banner-btn-book'>Book Now</button>
-              <button className='banner-btn-contact'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
@@ -15,9 +15,9 @@ import { motion as m } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 import { FaArrowRightLong } from "react-icons/fa6";
+import BannerButtons from '../components/bannerbuttons';
 
 const Home = () => {
-  const navigate = useNavigate();
   const form = useRef();
   const captchaSiteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY;
 
@@ -42,10 +42,6 @@ const Home = () => {
       );
   };
 
-  const goToBookings = () => {
-    navigate("/team-bookings");
-  }
-
   const onChange = (value) => {
     console.log("Captcha value:", value);
   }
@@ -67,10 +63,7 @@ const Home = () => {
             <div className="content-overlay"></div> 
             <h2 className='fade-in'>Welcome to CF Park</h2>
             <h3 className='fade-in'>Your ultimate destination for football enthusiasts of all ages</h3>
-            <div className='banner-btn'>
-              <button onClick={goToBookings} className='banner-btn-book home-btn fade-in'>Book Now</button>
-              <button className='banner-btn-contact home-btn fade-in'>Contact Us</button>
-            </div>
+            <BannerButtons />
           </div>
         </div>
       </section>

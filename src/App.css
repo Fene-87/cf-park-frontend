@@ -128,6 +128,7 @@ html {
   background-color: #f0a500;
   color: #fff;
   padding: 0.7rem 1.5rem;
+  border: none;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
@@ -1397,6 +1398,11 @@ html {
 
 .date-picker input {
   width: 50px !important;
+}
+
+.calendly-booking {
+  width: 80%;
+  height: 100%;
 }
 /* Team Bookings Page */
 

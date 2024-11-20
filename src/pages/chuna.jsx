@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../components/footer';
+import LocationNav from '../components/locationnav';
+import cfChuna from '../assets/CF-BG2.jpg'
 
 const Chuna = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
+      <div className='banner-nav'>
+        <LocationNav title="CF Park Chuna" />
+      </div>
       <div>
-        <p>CF Park Chuna</p>
         <div style={{ width: "100%" }}>
             <iframe 
               width="100%" 
@@ -20,6 +28,22 @@ const Chuna = () => {
             </iframe>
         </div>
       </div>
+      <section id='academy-second'>
+        <div className='academy-second-container shadow-effect'>
+          <h2>Gallery</h2>
+          <div className='academy-gallery'>
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+            <img src={cfChuna} alt="academy image" />
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   )
