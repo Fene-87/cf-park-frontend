@@ -3,6 +3,12 @@ import cfLogo from '../assets/cf-logo.jpg'
 import { FaInstagram, FaXTwitter, FaYoutube, FaSquareFacebook, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
+  const tiktokGradientStyle = {
+    background: "linear-gradient(45deg, #69C9D0, #EE1D52)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  };
+
   return (
     <footer id='footer'>
       <div className='footer-container'>
@@ -14,11 +20,21 @@ const Footer = () => {
           Dolor, praesentium.
         </p>
         <div className='footer-social-icons'>
-          <span><FaInstagram /></span>
-          <span><FaXTwitter /></span>
-          <span><FaYoutube /></span>
-          <span><FaSquareFacebook /></span>
-          <span><FaTiktok /></span>
+          <a href="#">
+            <span><FaInstagram /></span>
+          </a>
+          <a href="">
+            <span><FaXTwitter /></span>
+          </a>
+          <a href="#">
+            <span><FaYoutube /></span>
+          </a>
+          <a href="https://www.facebook.com/CFPark254?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+            <span><FaSquareFacebook /></span>
+          </a>
+          <a href="#">
+          <span style={tiktokGradientStyle}><FaTiktok /></span>
+          </a>
         </div>
 
         <hr />

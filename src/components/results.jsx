@@ -1,18 +1,16 @@
 import React from 'react'
 import ResultCard from './resultcard'
+import { results } from '../data/results'
 
 const Results = () => {
   return (
     <div className='results-section'>
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
-      <ResultCard />
+      {results.map((item, index) => (
+        <ResultCard
+          key={index}
+          item={item}
+         />
+      ))}
     </div>
   )
 }

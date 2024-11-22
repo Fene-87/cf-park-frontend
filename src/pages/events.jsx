@@ -26,16 +26,34 @@ const Events = () => {
         </div>
       </section>
 
-      <section id='leagues-first'>
-        <div className='academy-first-container shadow-effect'>
-          <h2>All Our Events</h2>
-          <p>
-            Discover the ultimate fitness experience tailored for all ages and fitness levels 
-            at our Fitness Program. Participants can enjoy a variety of group classes, 
-            personal training sessions, and access to state-of-the-art facilities. Whether 
-            you're looking to improve your strength, flexibility, or overall health, our 
-            expert trainers are here to guide and motivate you every step of the way.
-          </p>
+      <section id='events-section'>
+        <div className="events-container">
+          <div></div>
+          <div className='recent-events-container'>
+            <h3>Recent Events</h3>
+            <div className='event-card'>
+              <div>
+                <p>NOV</p>
+                <p>16</p>
+                <p>2024</p>
+              </div>
+
+              <div className='event-card-content'>
+                <h2>Featured <span>November 2024</span></h2>
+                <h4>Majanja Cup Memorial Tournament</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing 
+                  elit. Odit voluptate numquam ad eum. Repudiandae 
+                  laboriosam expedita tempora alias. Quos, provident. 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Libero dolorem facere voluptatem vitae asperiores? 
+                  Consequuntur doloremque alias saepe sapiente suscipit, 
+                  consectetur quibusdam facilis voluptates quia officia quas,
+                </p>
+              </div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </section>
 

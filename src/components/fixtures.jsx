@@ -1,13 +1,16 @@
 import React from 'react'
 import FixtureCard from './fixturecard'
+import { fixtures } from '../data/fixtures'
 
 const Fixtures = () => {
   return (
     <div className='results-section'>
-      <FixtureCard />
-      <FixtureCard />
-      <FixtureCard />
-      <FixtureCard />
+      {fixtures.map((item, index) => (
+        <FixtureCard 
+          item={item} 
+          key={index} 
+        />
+      ))}
     </div>
   )
 }

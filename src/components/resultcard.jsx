@@ -2,38 +2,51 @@ import React from 'react';
 import { MdOutlineLocationOn } from "react-icons/md";
 import FkfLogo from "../assets/fkf-logo.png";
 
-const ResultCard = () => {
+const ResultCard = ({ item }) => {
+  const {
+    date,
+    time,
+    homeAway,
+    homeTeam,
+    awayTeam,
+    homeTeamScore,
+    awayTeamScore,
+    htHomeTeamScore,
+    htAwayTeamScore,
+    location
+  } = item;
+
   return (
     <div className='result-card shadow-effect'>
       <div className='result-date'>
         <div className='result-date-txt'>
           <img src={FkfLogo} alt="FKF Logo" className='fkf-logo'/>
           <div>
-            <p>Sun 8 Sep</p> <br />
-            <p>9:00 AM</p>
+            <p>{date}</p> <br />
+            <p>{time}</p>
           </div>
         </div>
         <div className='home-away'>
-          <p>H</p>
+          <p>{homeAway}</p>
         </div>
       </div>
 
       <div className='result-detail'>
-        <p>C.F. Park FC</p>
+        <p>{homeTeam}</p>
         <div className='result-detail-div'>
           <p>FT</p>
           <div className='score-display'>
-            <p>1</p>
+            <p>{homeTeamScore}</p>
             <p className='score-divider'>|</p>
-            <p>0</p>
+            <p>{awayTeamScore}</p>
           </div>
-          <p>HT 0-0</p>
+          <p>HT {htHomeTeamScore}-{htAwayTeamScore}</p>
         </div>
-        <p>Hope Stars FC</p>
+        <p>{awayTeam}</p>
       </div>
 
       <div className='result-location'>
-        <p><MdOutlineLocationOn /> Arena Park</p>
+        <p><MdOutlineLocationOn /> {location}</p>
       </div>
     </div>
   )

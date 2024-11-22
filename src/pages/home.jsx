@@ -197,8 +197,8 @@ const Home = () => {
                 <textarea name="message" id="message" className='form-input form-text' placeholder='Get in touch...'></textarea>
 
                 <ReCAPTCHA
-                  // sitekey={captchaSiteKey}
-                  sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+                  sitekey={captchaSiteKey}
+                  // sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
                   onChange={onChange}
                 />
 
