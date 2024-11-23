@@ -668,6 +668,11 @@ html {
   gap: 1.5rem;
 }
 
+.g-recaptcha {
+  transform: scale(0.85);
+  transform-origin: 0 0;
+}
+
 .form-input {
   border: none;
   outline: none;
@@ -1777,6 +1782,24 @@ html {
     margin-top: 25px;
   }
   
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 100%;
+  }
+
+  .captcha-container div {
+    transform: scale(0.95);
+    transform-origin: 0 0;
+  }
+
+  .rc-anchor-normal {
+    width: 350px !important;
+    margin: 0 auto;
+  }
+
   .form-input {
     width: 100%;
     font-size: 15px;
