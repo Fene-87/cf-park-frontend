@@ -61,8 +61,6 @@ html {
 
 .nav-logo {
   height: fit-content;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
   overflow: hidden;
 }
 
@@ -666,6 +664,11 @@ html {
   flex-direction: column;
   margin-top: 20px;
   gap: 1.5rem;
+}
+
+.g-recaptcha {
+  transform: scale(0.85);
+  transform-origin: 0 0;
 }
 
 .form-input {
@@ -1532,7 +1535,8 @@ html {
   }
   
   .nav-image {
-    height: 50px;
+    height: 60px;
+    width: 40px;
   }
 
   .menu-list {
@@ -1777,6 +1781,24 @@ html {
     margin-top: 25px;
   }
   
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 100%;
+  }
+
+  .captcha-container div {
+    transform: scale(0.95);
+    transform-origin: 0 0;
+  }
+
+  .rc-anchor-normal {
+    width: 350px !important;
+    margin: 0 auto;
+  }
+
   .form-input {
     width: 100%;
     font-size: 15px;

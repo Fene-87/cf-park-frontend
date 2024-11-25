@@ -196,11 +196,13 @@ const Home = () => {
                 <label htmlFor="message" className='hidden'>Get in touch</label>
                 <textarea name="message" id="message" className='form-input form-text' placeholder='Get in touch...'></textarea>
 
-                <ReCAPTCHA
-                  sitekey={captchaSiteKey}
-                  // sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-                  onChange={onChange}
-                />
+                <div className='captcha-container'>
+                  <ReCAPTCHA
+                    sitekey={captchaSiteKey}
+                    // sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+                    onChange={onChange}
+                  />
+                </div>
 
                 <button type='submit' className='banner-btn-book home-btn fade-in contact-btn'>Submit</button>
               </form>
