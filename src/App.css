@@ -61,8 +61,6 @@ html {
 
 .nav-logo {
   height: fit-content;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
   overflow: hidden;
 }
 
@@ -1537,7 +1535,8 @@ html {
   }
   
   .nav-image {
-    height: 50px;
+    height: 60px;
+    width: 40px;
   }
 
   .menu-list {

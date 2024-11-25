@@ -1,5 +1,5 @@
 import React from 'react';
-import cfLogo from '../assets/cf-logo.jpg'
+import cfLogo from '../assets/logo.png'
 import { FaInstagram, FaXTwitter, FaYoutube, FaSquareFacebook, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {

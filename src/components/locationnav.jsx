@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import cfLogo from '../assets/cf-logo.jpg'
+import cfLogo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
