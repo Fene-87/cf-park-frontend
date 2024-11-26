@@ -10,7 +10,7 @@ import cfpark from '../assets/cfpark-background.jpg';
 import academyImg from '../assets/academy.jpg';
 import adultImg from '../assets/adult-leagues-3.jpg';
 import youthImg from '../assets/academy.jpg';
-import coachez from '../assets/profile-placeholder.png';
+import coachez from '../assets/edy.jpg';
 import { motion as m } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -166,7 +166,9 @@ const Home = () => {
           <h3>Contact Us</h3>
           <div className='contact-options'>
             <div className='contact-person shadow-effect'>
-              <img src={coachez} alt="coach-eddy-image" className='coach-img' />
+              <div className='coach-img-div'>
+                <img src={coachez} alt="coach-eddy-image" className='coach-img' />
+              </div>
               <div className='contact-icons'>
                 <FiPhone />
                 <FaRegMessage />

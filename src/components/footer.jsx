@@ -14,10 +14,9 @@ const Footer = () => {
       <div className='footer-container'>
         <img src={cfLogo} alt="footer-image" />
         <p className='footer-txt'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi 
-          natus aperiam omnis reiciendis nesciunt cupiditate sunt. Id minus nulla 
-          laudantium, harum numquam perferendis hic dolorum totam similique est. 
-          Dolor, praesentium.
+          Building future stars, fueling professional dreams, and honoring 
+          legends who never hang up their boots. Our academy, pro team, and 
+          adult league keep the beautiful game alive for all. Karibu!
         </p>
         <div className='footer-social-icons'>
           <a href="#">

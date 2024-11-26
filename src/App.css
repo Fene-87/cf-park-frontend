@@ -594,6 +594,15 @@ html {
   background-color: #fff;
   padding: 1rem 0;
   box-shadow: 0 10px 20px -5px rgba(71, 114, 254, 0.6);
+  border-radius: 8px;
+}
+
+.coach-img-div {
+  /* border: 2px solid #89b2ac; */
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .coach-img {
@@ -606,7 +615,7 @@ html {
   gap: 3rem;
   font-size: 28px;
   color: #026467;
-  margin-top: 5px;
+  margin-top: 30px;
 }
 
 .phone-no {
