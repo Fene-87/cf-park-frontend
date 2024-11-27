@@ -8,8 +8,8 @@ import { FaRegMessage } from "react-icons/fa6";
 import Footer from '../components/footer';
 import cfpark from '../assets/cfpark-background.jpg';
 import academyImg from '../assets/academy.jpg';
-import adultImg from '../assets/adult-leagues-3.jpg';
-import youthImg from '../assets/academy.jpg';
+import adultImg from '../assets/adult-leagues4.jpg';
+import youthImg from '../assets/FKF-BG2.jpg';
 import coachez from '../assets/edy.jpg';
 import { motion as m } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -126,13 +126,13 @@ const Home = () => {
             </div>
 
             <div>
-              <img src={cfpark} alt="kids-academy" className='program-img'/>
+              <img src={youthImg} alt="kids-academy" className='program-img'/>
             </div>
           </div>
 
           <div className='program shadow-effect'>
             <div>
-              <img src={cfpark} alt="kids-academy" className='program-img'/>
+              <img src={adultImg} alt="kids-academy" className='program-img'/>
             </div>
 
             <div className='program-content'>
