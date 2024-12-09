@@ -28,6 +28,7 @@ import academyImg8 from '../assets/academy8.jpg';
 import academyImg9 from '../assets/academy9.jpg';
 import academyImg10 from '../assets/academy10.jpg';
 import BannerButtons from '../components/bannerbuttons';
+import coachez from '../assets/edy.jpg';
 
 const Academy = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
@@ -271,8 +272,33 @@ const Academy = () => {
                 </div>
               </div>
             )}
+            </div> 
+          </div>
+
+          <div className='coaches-section'>
+            <h3>Experienced Sports Coaches</h3>
+            <p>
+              Where passion meets expertise—our seasoned coaches are 
+              committed to nurturing talent, building character, and 
+              inspiring champions both on and off the field.
+            </p>
+            <div className='coach-div'>
+              <div className='coach-section-image'>
+                <img src={coachez} alt="coach eddy" />
+                <h4>Coach Eddy</h4>
+                <h5>Certificates</h5>
+              </div>
+              <div className='coach-section-image'>
+                <img src={coachez} alt="coach grey" />
+                <h4>Coach Grey</h4>
+                <h5>Certificates</h5>
+              </div>
+              <div className='coach-section-image'>
+                <img src={coachez} alt="Coach Divian" />
+                <h4>Coach Divian</h4>
+                <h5>Certificates</h5>
+              </div>
             </div>
-            
           </div>
         </div>
       </section>

@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react'
 import Footer from '../components/footer'
-import Navbar from '../components/navbar'
 import LocationNav from '../components/locationnav'
+
 import cfGreatWall from '../assets/cfgreatwall2.jpg'
+import cfGreatWallOne from '../assets/academygw7.jpg'
+import cfGreatWallTwo from '../assets/academygw1.jpg'
+import cfGreatWallThree from '../assets/academygw2.jpg'
+import cfGreatWallFour from '../assets/academygw3.jpg'
+import cfGreatWallFive from '../assets/academygw4.jpg'
+import cfGreatWallSix from '../assets/academygw5.jpg'
+import cfGreatWallSeven from '../assets/academygw6.jpg'
 
 const GreatWall = () => {
   useEffect(() => {
@@ -34,13 +41,13 @@ const GreatWall = () => {
           <h2>Gallery</h2>
           <div className='academy-gallery'>
             <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
-            <img src={cfGreatWall} alt="academy image" />
+            <img src={cfGreatWallOne} alt="academy image" />
+            <img src={cfGreatWallTwo} alt="academy image" />
+            <img src={cfGreatWallThree} alt="academy image" />
+            <img src={cfGreatWallFour} alt="academy image" />
+            <img src={cfGreatWallFive} alt="academy image" />
+            <img src={cfGreatWallSix} alt="academy image" />
+            <img src={cfGreatWallSeven} alt="academy image" />
             <img src={cfGreatWall} alt="academy image" />
           </div>
         </div>
