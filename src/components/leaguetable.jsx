@@ -28,89 +28,89 @@ const LeagueTable = () => {
     <tr>
       <td>1</td>
       <td>MAASAI FLOWERS FC</td>
+      <td>4</td>
       <td>3</td>
-      <td>3</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>9</td>
       <td>1</td>
       <td>+8</td>
-      <td>9</td>
+      <td>10</td>
       <td className='club-form'>
         <p class="form win"><TiTick /></p>
         <p class="form win"><TiTick /></p>
-        <p class="form win"><TiTick /></p>
+        <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
       <td>2</td>
+      <td>TIPPING FC</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>12</td>
+      <td>7</td>
+      <td>+5</td>
+      <td>10</td>
+      <td className='club-form'>      
+        <p class="form win"><TiTick /></p>
+        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
+      </td>
+    </tr>
+
+    <tr className='cf-row'>
+      <td>3</td>
+      <td>C.F. PARK. FC</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>11</td>
+      <td>7</td>
+      <td>+4</td>
+      <td>10</td>
+      <td className='club-form'> 
+        <p class="form win"><TiTick /></p>
+        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>4</td>
       <td>MASHIMONI FC</td>
+      <td>4</td>
       <td>3</td>
-      <td>3</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>5</td>
       <td>1</td>
       <td>+4</td>
-      <td>9</td>
-      <td className='club-form'>
+      <td>10</td>
+      <td className='club-form'>   
         <p class="form win"><TiTick /></p>
         <p class="form win"><TiTick /></p>
-        <p class="form win"><TiTick /></p>
+        <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
-      <td>3</td>
-      <td>C.F. PARK. FC</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>8</td>
       <td>5</td>
-      <td>+3</td>
-      <td>6</td>
-      <td className='club-form'>
-        <p class="form win"><TiTick /></p>
-        <p class="form loss"><FaXmark /></p>
-        <p class="form win"><TiTick /></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td>4</td>
-      <td>TIPPING FC</td>
+      <td>TINGA FC</td>
       <td>3</td>
       <td>2</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>11</td>
+      <td>1</td>
+      <td>+10</td>
       <td>7</td>
-      <td>4</td>
-      <td>+3</td>
-      <td>6</td>
       <td className='club-form'>
         <p class="form win"><TiTick /></p>
-        <p class="form loss"><FaXmark /></p>
-        <p class="form win"><TiTick /></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td>5</td>
-      <td>SPRINGERS FC</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>4</td>
-      <td>6</td>
-      <td>-2</td>
-      <td>6</td>
-      <td className='club-form'>
-        <p class="form win"><TiTick /></p>
-        <p class="form loss"><FaXmark /></p>
+        <p class="form draw"><BsDash /></p>
         <p class="form win"><TiTick /></p>
       </td>
     </tr>
@@ -118,52 +118,52 @@ const LeagueTable = () => {
     <tr>
       <td>6</td>
       <td>SOCCER SHARKS FC</td>
-      <td>3</td>
+      <td>5</td>
+      <td>2</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <td>2</td>
+      <td>11</td>
+      <td>5</td>
+      <td>+6</td>
       <td>7</td>
-      <td>3</td>
-      <td>+4</td>
-      <td>4</td>
-      <td className='club-form'>
+      <td className='club-form'>     
+        <p class="form draw"><BsDash /></p>
         <p class="form win"><TiTick /></p>
         <p class="form loss"><FaXmark /></p>
-        <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
       <td>7</td>
       <td>SPANNER FC</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
       <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>6</td>
       <td>3</td>
-      <td>+1</td>
-      <td>4</td>
+      <td>+3</td>
+      <td>7</td>
       <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
         <p class="form win"><TiTick /></p>
         <p class="form loss"><FaXmark /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>8</td>
-      <td>TINGA FC</td>
+      <td>MIGINGO FC</td>
+      <td>5</td>
       <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7</td>
-      <td>0</td>
-      <td>+7</td>
       <td>3</td>
-      <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>+1</td>
+      <td>6</td>
+      <td className='club-form'> 
+        <p class="form loss"><FaXmark /></p>
         <p class="form draw"><BsDash /></p>
         <p class="form win"><TiTick /></p>
       </td>
@@ -171,53 +171,53 @@ const LeagueTable = () => {
 
     <tr>
       <td>9</td>
-      <td>HOPE STAR FC</td>
+      <td>SPRINGERS FC</td>
+      <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>0</td>
       <td>1</td>
-      <td>5</td>
       <td>4</td>
-      <td>+1</td>
-      <td>3</td>
+      <td>7</td>
+      <td>-3</td>
+      <td>6</td>
       <td className='club-form'>
-        <p class="form win"><TiTick /></p>
         <p class="form loss"><FaXmark /></p>
+        <p class="form win"><TiTick /></p>
         <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
       <td>10</td>
-      <td>GREEN STAR FC</td>
-      <td>2</td>
+      <td>JOSAN FC</td>
+      <td>3</td>
       <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
       <td>2</td>
       <td>0</td>
       <td>3</td>
+      <td>2</td>
+      <td>+1</td>
+      <td>5</td>
       <td className='club-form'>
-        <p class="form win"><TiTick /></p>
-        <p class="form loss"><FaXmark /></p>
         <p class="form draw"><BsDash /></p>
+        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>11</td>
-      <td>JOSAN FC</td>
+      <td>GREEN STARS FC</td>
+      <td>4</td>
+      <td>1</td>
       <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
       <td>0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
+      <td>5</td>
+      <td className='club-form'>  
+        <p class="form loss"><FaXmark /></p>
         <p class="form draw"><BsDash /></p>
         <p class="form draw"><BsDash /></p>
       </td>
@@ -225,184 +225,183 @@ const LeagueTable = () => {
 
     <tr>
       <td>12</td>
-      <td>MIGINGO FC</td>
+      <td>MARINES FC</td>
       <td>3</td>
-      <td>0</td>
-      <td>2</td>
       <td>1</td>
-      <td>3</td>
-      <td>5</td>
-      <td>-2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
       <td>2</td>
+      <td>+2</td>
+      <td>4</td>
       <td className='club-form'>
         <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
         <p class="form loss"><FaXmark /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>13</td>
-      <td>TIGERS FC</td>
+      <td>PRISON FC</td>
       <td>3</td>
-      <td>0</td>
-      <td>2</td>
       <td>1</td>
-      <td>3</td>
-      <td>5</td>
-      <td>-2</td>
-      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>4</td>
       <td className='club-form'>
         <p class="form draw"><BsDash /></p>
         <p class="form loss"><FaXmark /></p>
-        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>14</td>
-      <td>MARINES FC</td>
+      <td>SUNRISE YOUTH FC</td>
+      <td>3</td>
       <td>1</td>
-      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>-2</td>
+      <td>4</td>
       <td className='club-form'>
+        <p class="form loss"><FaXmark /></p>
         <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>15</td>
-      <td>PRISON FC</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
+      <td>LUCKY BASE FC</td>
       <td>3</td>
-      <td>4</td>
-      <td>-1</td>
       <td>1</td>
-      <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>-4</td>
+      <td>4</td>
+      <td className='club-form'>   
         <p class="form loss"><FaXmark /></p>
+        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
       </td>
     </tr>
 
     <tr>
       <td>16</td>
-      <td>GOLDEN AXE DEAF FC</td>
-      <td>2</td>
+      <td>PARPET FC</td>
+      <td>4</td>
       <td>0</td>
-      <td>1</td>
-      <td>1</td>
       <td>3</td>
-      <td>5</td>
-      <td>-2</td>
       <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>-2</td>
+      <td>3</td>
       <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
         <p class="form loss"><FaXmark /></p>
+        <p class="form draw"><BsDash /></p>
         <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
       <td>17</td>
-      <td>PARPET FC</td>
-      <td>2</td>
+      <td>HOPE STAR FC</td>
+      <td>4</td>
+      <td>1</td>
       <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
       <td>3</td>
-      <td>-2</td>
-      <td>1</td>
+      <td>5</td>
+      <td>10</td>
+      <td>-5</td>
+      <td>3</td>
       <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
+        <p class="form win"><TiTick /></p>
         <p class="form loss"><FaXmark /></p>
-        <p class="form draw"><BsDash /></p>
+        <p class="form loss"><FaXmark /></p>
       </td>
     </tr>
 
     <tr>
       <td>18</td>
-      <td>LUCKY BASE FC</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
+      <td>TIGERS FC</td>
       <td>5</td>
-      <td>-5</td>
-      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>11</td>
+      <td>-7</td>
+      <td>2</td>
       <td className='club-form'>
         <p class="form draw"><BsDash /></p>
         <p class="form loss"><FaXmark /></p>
-        <p class="form draw"><BsDash /></p>
+        <p class="form loss"><FaXmark /></p>
       </td>
     </tr>
 
     <tr>
       <td>19</td>
-      <td>ALLYBABA FC</td>
+      <td>GOLDEN AXE DEAF FC</td>
       <td>3</td>
       <td>0</td>
       <td>1</td>
       <td>2</td>
-      <td>0</td>
-      <td>9</td>
-      <td>-9</td>
+      <td>3</td>
+      <td>7</td>
+      <td>-4</td>
       <td>1</td>
       <td className='club-form'>
-        <p class="form loss"><FaXmark /></p>
-        <p class="form loss"><FaXmark /></p>
         <p class="form draw"><BsDash /></p>
+        <p class="form loss"><FaXmark /></p>
+        <p class="form loss"><FaXmark /></p>
       </td>
     </tr>
 
     <tr>
       <td>20</td>
       <td>ECCL FC</td>
-      <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>0</td>
-      <td>2</td>
       <td>1</td>
-      <td>7</td>
+      <td>2</td>
+      <td>4</td>
+      <td>10</td>
       <td>-6</td>
-      <td>0</td>
+      <td>1</td>
       <td className='club-form'>
         <p class="form loss"><FaXmark /></p>
         <p class="form loss"><FaXmark /></p>
-        <p class="form loss"><FaXmark /></p>
+        <p class="form draw"><BsDash /></p>
       </td>
     </tr>
 
     <tr>
       <td>21</td>
-      <td>SUNRISE YOUTH FC</td>
+      <td>ALLYBABA FC</td>
+      <td>4</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>12</td>
+      <td>-11</td>
+      <td>1</td>
       <td className='club-form'>
-        <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
-        <p class="form draw"><BsDash /></p>
+        <p class="form loss"><FaXmark /></p>
+        <p class="form loss"><FaXmark /></p>
+        <p class="form loss"><FaXmark /></p>
       </td>
-    </tr>
-    
+    </tr>  
   </tbody>
       </table>
     </div>
