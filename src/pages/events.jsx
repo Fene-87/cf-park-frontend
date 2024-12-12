@@ -13,7 +13,7 @@ const Events = () => {
       exit={{ opacity: 0.5}}
       transition={{ duration: 0.75, ease: "easeInOut"}}
     >
-      <section id='fitness-bg-img' className='shadow-effect'>
+      <section id='events-bg-img' className='shadow-effect'>
         <div className="bg-gradient">
           <div className="banner-nav">
             <Navbar />
@@ -51,7 +51,6 @@ const Events = () => {
                   consectetur quibusdam facilis voluptates quia officia quas,
                 </p>
               </div>
-              <div></div>
             </div>
           </div>
         </div>
